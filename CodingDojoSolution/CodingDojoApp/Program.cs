@@ -14,8 +14,9 @@ namespace CodingDojoApp
             //ServiceClass bmwService = new MechMaintenance();
 
             Console.WriteLine(new MechMaintenance(new ServiceClass()).getCost());
-
-            
+                       
         }
+
+
     }
 }
