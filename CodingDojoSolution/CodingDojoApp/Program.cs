@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Service;
+using Adapter;
 
 namespace CodingDojoApp
 {
@@ -14,7 +15,8 @@ namespace CodingDojoApp
             //ServiceClass bmwService = new MechMaintenance();
 
             Console.WriteLine(new MechMaintenance(new ServiceClass()).getCost());
-                       
+
+            Portal myPortal = new Adapter.Portal(new InkPrinterAdapter());
         }
 
 

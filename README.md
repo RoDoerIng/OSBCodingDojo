@@ -8,7 +8,7 @@ Monthly Coding Dojo for skill development and/or improvement
 ## Patterns
 
 ### Fluent Interfaces
-With methods returning `this` you can combine onemethod after another like:
+With methods returning `this` you can combine one method after another like:
 
 ```
 bmwService.withMechanicalMaintenance().withSafetyTest().getCost()
@@ -77,7 +77,7 @@ To use the decorator pattern, the base object (or its cosntructor) is passed to 
 ```CSharp
 static void Main(string[] args)
 {
-    Console.WriteLine(new PizzaToppingMushrooms(new PizzaToppingCheese(newzaBase())).getCost());               
+    Console.WriteLine(new PizzaToppingMushrooms(new PizzaToppingCheese(new PizzaBase())).getCost());               
 }
 ```
 This outputs the cost for a Pizza + Cheese + Mushrooms.
