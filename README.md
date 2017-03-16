@@ -7,6 +7,10 @@ Monthly Coding Dojo for skill development and/or improvement
 
 ## Patterns
 
+- [Fluent Interfaces](#fluent-interfaces)
+- [Decorator Pattern](#decorator-pattern)
+- [Apater Pattern](#adapter-pattern)
+
 ### Fluent Interfaces
 With methods returning `this` you can combine one method after another like:
 
@@ -83,4 +87,77 @@ static void Main(string[] args)
 This outputs the cost for a Pizza + Cheese + Mushrooms.
 ```PowerShell
 6.3
+```
+
+### Adapter Pattern
+
+Imagine a class `Caller` that contains an object of class `ClassA` with the interface `IClassA`. Now you've got an object of class `ClassB` that genrally serves the same purpose as `ClassA` but implements different methods to achieve the same functionality. To use `ClassB` within `Caller` you need to create an adapter class  `AdapterA2B` that implements the interface `IClassA` and **adapts** `ClassB`'s methods to them of `ClassA`.
+
+The mentioned classes could look like follows:
+```CSharp
+public interface IClassA{
+  void doAFoo();
+}
+```
+
+```CSharp
+public class ClassA : IClassA{
+  public void doAFoo() {
+    Console.WriteLine("doing Foo the A way...");
+  }
+}
+```
+
+```CSharp
+public class ClassB{
+  public void doBFoo() {
+    Console.WriteLine("doing Foo the B way...");
+  }
+}
+```
+```CSharp
+public class Caller{
+  private IClassA fooClass
+
+  public Caller(IClassA fooClass){
+    this.fooClass = fooClass;
+  }
+
+  public void doFoo(){
+    fooClass.doFoo();
+  }
+}
+```
+
+```CSharp
+public class AdapterA2B : IClassA{
+  private ClassB class2Adapt
+
+  public AdapterA2B(ClassB class2Adapt){
+    this.class2Adapt = class2Adapt;
+  }
+
+  public void doAFoo() {
+    class2Adapt.doBFoo();
+  }
+}
+```
+
+Using `Caller` with both classes `ClassA` and `ClassB` could look like that:
+
+```CSharp
+static void Main(string[] args)
+{
+    Caller caller1 = new Caller(new ClassA());
+    Caller caller2 = new Caller(new AdapterA2B(new ClassB()));
+
+    caller1.doFoo();
+    caller2.doFoo();                       
+}
+```
+
+... and produce the following output:
+```PowerShell
+doing Foo the A way...
+doing Foo the B way...
 ```
