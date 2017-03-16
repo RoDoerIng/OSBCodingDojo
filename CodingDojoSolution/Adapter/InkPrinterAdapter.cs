@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    class InkPrinterAdapter : IInkPrinter
+    public class InkPrinterAdapter : IInkPrinter
     {
         private LaserPrinter printer2Adapt;
 

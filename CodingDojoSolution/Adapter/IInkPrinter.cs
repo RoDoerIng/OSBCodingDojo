@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    interface IInkPrinter
+    public interface IInkPrinter
     {
         void openConnection();
         void closeConnection();

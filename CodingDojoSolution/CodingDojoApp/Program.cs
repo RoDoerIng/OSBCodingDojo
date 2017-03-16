@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Service;
 using Adapter;
 
+
 namespace CodingDojoApp
 {
     class Program
@@ -16,7 +17,14 @@ namespace CodingDojoApp
 
             Console.WriteLine(new MechMaintenance(new ServiceClass()).getCost());
 
-            Portal myPortal = new Adapter.Portal(new InkPrinterAdapter());
+            Portal myPortal = new Portal(new InkPrinter());
+
+            Portal myPortalWithAdapter = new Portal(new InkPrinterAdapter(new LaserPrinter()));
+
+            myPortal.doFoo();
+            myPortalWithAdapter.doFoo();
+
+
         }
 
 

@@ -9,6 +9,7 @@ namespace Adapter
     public class LaserPrinter
     {
         public bool isPrint(string toPrint) {
+            Console.WriteLine(toPrint);
             return !(toPrint.Equals(""));
         }
 

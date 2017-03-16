@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    class Portal
+    public class Portal
     {
         private IInkPrinter printer;
 

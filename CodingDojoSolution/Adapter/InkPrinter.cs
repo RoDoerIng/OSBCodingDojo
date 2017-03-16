@@ -6,10 +6,12 @@ using System.Threading.Tasks;
 
 namespace Adapter
 {
-    class InkPrinter : IInkPrinter
+    public class InkPrinter : IInkPrinter
     {
         public void openConnection() { }
         public void closeConnection() { }
-        public void print(string toPrint) { }
+        public void print(string toPrint) {
+            Console.WriteLine(toPrint);
+        }
     }
 }
