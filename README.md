@@ -91,7 +91,7 @@ This outputs the cost for a Pizza + Cheese + Mushrooms.
 
 ### Adapter Pattern
 
-Imagine a class `Caller` that contains an object of class `ClassA` with the interface `IClassA`. Now you've got an object of class `ClassB` that genrally serves the same purpose as `ClassA` but implements different methods to achieve the same functionality. To use `ClassB` within `Caller` you need to create an adapter class  `AdapterA2B` that implements the interface `IClassA` and **adapts** `ClassB`'s methods to them of `ClassA`.
+Imagine a class `Caller` that contains an object of class `ClassA` with the interface `IClassA`. Now you've got an object of class `ClassB` that generally serves the same purpose as `ClassA` but implements different methods to achieve that functionality. To use `ClassB` within `Caller` you need to create an adapter class  `AdapterA2B` that implements the interface `IClassA` and **adapts** `ClassB`'s methods to them of `ClassA`.
 
 The mentioned classes could look like follows:
 ```CSharp
