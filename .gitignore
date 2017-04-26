@@ -250,3 +250,6 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+FactoryPattern/FactoryPattern.Device.Application.46f78ee7-589b-4bc0-bfe0-112c8827b048.bootinfo
+FactoryPattern/FactoryPattern.Device.Application.46f78ee7-589b-4bc0-bfe0-112c8827b048.bootinfo_guids
+FactoryPattern/FactoryPattern.Device.Application.46f78ee7-589b-4bc0-bfe0-112c8827b048.compileinfo

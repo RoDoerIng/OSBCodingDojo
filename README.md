@@ -10,6 +10,7 @@ Monthly Coding Dojo for skill development and/or improvement
 - [Fluent Interfaces](#fluent-interfaces)
 - [Decorator Pattern](#decorator-pattern)
 - [Apater Pattern](#adapter-pattern)
+- [Facade Pattern](#facade-pattern)
 
 ### Fluent Interfaces
 With methods returning `this` you can combine one method after another like:
@@ -161,3 +162,5 @@ static void Main(string[] args)
 doing Foo the A way...
 doing Foo the B way...
 ```
+
+### Facade Pattern
