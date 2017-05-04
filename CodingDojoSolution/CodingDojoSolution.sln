@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-VisualStudioVersion = 15.0.26228.9
+VisualStudioVersion = 15.0.26403.7
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Service", "Service\Service.csproj", "{C1F7C9F9-EC8E-4F31-BCA2-9BB0BB3CED10}"
 EndProject
@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CodingDojoApp", "CodingDojo
 	EndProjectSection
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Adapter", "Adapter\Adapter.csproj", "{67A4930D-C681-4C51-BE33-6629F29D6E4F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VehFactoryLib", "VehFactoryLib\VehFactoryLib.csproj", "{CE152BC4-DF9F-49AA-93FE-7F76AA2AE84C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,6 +32,10 @@ Global
 		{67A4930D-C681-4C51-BE33-6629F29D6E4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{67A4930D-C681-4C51-BE33-6629F29D6E4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{67A4930D-C681-4C51-BE33-6629F29D6E4F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE152BC4-DF9F-49AA-93FE-7F76AA2AE84C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE152BC4-DF9F-49AA-93FE-7F76AA2AE84C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE152BC4-DF9F-49AA-93FE-7F76AA2AE84C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE152BC4-DF9F-49AA-93FE-7F76AA2AE84C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Service;
 using Adapter;
+using VehFact;
 
 
 namespace CodingDojoApp
@@ -13,18 +14,22 @@ namespace CodingDojoApp
     {
         static void Main(string[] args)
         {
-            //ServiceClass bmwService = new MechMaintenance();
+            VehicleFactory vehicleFactory = new VehicleFactory();
 
-            Console.WriteLine(new MechMaintenance(new ServiceClass()).getCost());
+            IVehicle firstVehicle;
+            IVehicle secondVehicle;
 
-            Portal myPortal = new Portal(new InkPrinter());
+            firstVehicle = vehicleFactory.create(VehicleFactory.VehicleType.Car, "SuperCar");
+            secondVehicle = vehicleFactory.create(VehicleFactory.VehicleType.Motorcycle, "SuperCycle");
 
-            Portal myPortalWithAdapter = new Portal(new InkPrinterAdapter(new LaserPrinter()));
-
-            myPortal.doFoo();
-            myPortalWithAdapter.doFoo();
-
-
+            firstVehicle.drive();
+            secondVehicle.startEngine();
+            secondVehicle.drive();
+            firstVehicle.brake();
+            secondVehicle.brake();
+            firstVehicle.stopEngine();
+            secondVehicle.stopEngine();
+            
         }
 
 
