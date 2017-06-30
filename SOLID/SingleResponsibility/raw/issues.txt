@@ -1,0 +1,3 @@
+transferCondition -> smemaCondition
+isSending METHOD!
+readExtCondition2Snd and readExtCondition2Rec interface VAR -> VAR_INPUT
